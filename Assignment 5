@@ -1,0 +1,98 @@
+
+
+Q 1: What is Seaborn?
+Q 2: What is Matplotlib?
+Q 3: Does Seaborn need Matplotlib?
+Q: 4 How can we see all of the data sets available in the Seaborn
+library?
+Q: 5 What is CMAP in Seaborn?
+Q:6 What is the Seaborn function for colouring plots?
+Q: 7 What is Histograms in Seaborn?
+Q: 8 How do you plot a histogram in Seaborn?
+Q: 9 How to change the minimum number of ticks of MaxNLocator in
+Seaborn?
+Q:10 How to put a png image like a watermark on a line plot in
+Seaborn?
+Q:11 How to change the legend font size of FacetGrid plot in
+Seaborn?
+
+
+Q1: What is Seaborn?
+Seaborn is a Python data visualization library built on top of Matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. Seaborn simplifies complex visualizations with fewer lines of code and integrates well with Pandas data structures.
+
+Q2: What is Matplotlib?
+Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. It is highly customizable and serves as the foundation for many other plotting libraries, including Seaborn.
+
+Q3: Does Seaborn need Matplotlib?
+Yes, Seaborn requires Matplotlib. Seaborn is essentially an abstraction layer on top of Matplotlib, making it easier to create complex plots with simpler code.
+
+Q4: How can we see all of the datasets available in the Seaborn library?
+You can view all the datasets available in Seaborn by using the seaborn.get_dataset_names() function. Here's an example:
+import seaborn as sns
+print(sns.get_dataset_names())
+Q5: What is CMAP in Seaborn?
+CMAP refers to colormap, which is a range of colors used in plots to map data values to colors. In Seaborn, colormaps can be used to enhance the visual appeal and clarity of plots.
+
+Q6: What is the Seaborn function for coloring plots?
+Seaborn offers several functions for coloring plots, with color_palette() being one of the primary functions. You can specify a colormap or a list of colors using this function.
+
+Q7: What is a Histogram in Seaborn?
+A histogram in Seaborn is a plot that shows the distribution of a dataset. It divides the data into bins and displays the frequency of data points in each bin. This helps in understanding the underlying frequency distribution of the data.
+
+Q8: How do you plot a histogram in Seaborn?
+You can plot a histogram in Seaborn using the sns.histplot() function. Here's an example:
+
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+data = sns.load_dataset("iris")
+sns.histplot(data['sepal_length'])
+plt.show()
+Q9: How to change the minimum number of ticks of MaxNLocator in Seaborn?
+To change the minimum number of ticks using MaxNLocator in Seaborn, you need to use Matplotlib's MaxNLocator directly. Here's an example:
+
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator
+
+# Example plot
+sns.histplot(data['sepal_length'])
+plt.gca().xaxis.set_major_locator(MaxNLocator(integer=True, min_n_ticks=5))
+plt.show()
+Q10: How to put a PNG image like a watermark on a line plot in Seaborn?
+You can add a PNG image as a watermark to a Seaborn plot by using Matplotlib's figure.figimage() or Axes.imshow(). Here's an example:
+
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
+# Example plot
+sns.lineplot(x=[0, 1, 2], y=[0, 1, 4])
+
+# Load and place the image
+img = mpimg.imread('path/to/image.png')
+plt.imshow(img, extent=[0.5, 1.5, 0, 1], alpha=0.5)
+
+plt.show()
+Q11: How to change the legend font size of a FacetGrid plot in Seaborn?
+To change the legend font size in a FacetGrid plot, you can access the legend object and modify its properties. Here's an example:
+
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Example data and plot
+data = sns.load_dataset('tips')
+g = sns.FacetGrid(data, col="time", hue="sex")
+g.map(sns.scatterplot, "total_bill", "tip")
+g.add_legend()
+for text in g.legend.texts:
+    text.set_fontsize('10')  # Change to desired font size
+
+plt.show()
+
+
+
