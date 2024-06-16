@@ -13,9 +13,7 @@ NumPy arrays?
 10. How do you concatenate 2 NumPy arrays?
 11. How do you convert Pandas DataFrame to a NumPy array?
 12. What do you understand by Vectorization in NumPy
-Answers all questions 
-ChatGPT
-Certainly! Here's an overview of the questions with detailed answers:
+
 
 1. What is NumPy? Why should we use it?
 NumPy, which stands for Numerical Python, is a library in Python for scientific computing. It provides support for arrays, matrices, and a wide range of mathematical functions to operate on these data structures. NumPy is highly efficient for numerical computations due to its underlying C implementation, making it significantly faster than standard Python lists.
