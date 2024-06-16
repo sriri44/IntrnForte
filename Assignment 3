@@ -1,0 +1,99 @@
+
+
+How is the statistical significance of an insight assessed?
+2. Where are long-tailed distributions used?
+3. What is the central limit theorem?
+4. Can you give an example to denote the working of the central limit
+theorem?
+5. Most common characteristics used in descriptive statistics?
+6.How to calculate range and interquartile range
+
+1. Assessing the Statistical Significance of an Insight
+The statistical significance of an insight is assessed using hypothesis testing. Here’s a brief outline of the process:
+
+Formulate Hypotheses: Define the null hypothesis (
+�
+0
+H 
+0
+​
+ ) which typically represents no effect or no difference, and the alternative hypothesis (
+�
+1
+H 
+1
+​
+ ) which represents the effect or difference you expect.
+Choose a Significance Level (
+�
+α): Commonly set at 0.05, this is the probability of rejecting the null hypothesis when it is actually true.
+Collect Data: Gather the sample data relevant to your hypotheses.
+Calculate a Test Statistic: Depending on the data and hypotheses, this could be a t-statistic, z-statistic, chi-square statistic, etc.
+Determine the p-value: The p-value indicates the probability of observing the data (or something more extreme) assuming the null hypothesis is true.
+Compare p-value with 
+�
+α: If the p-value is less than 
+�
+α, reject the null hypothesis, indicating that the result is statistically significant.
+2. Uses of Long-Tailed Distributions
+Long-tailed distributions are used in various fields where rare events with significant impact occur. Examples include:
+
+Finance: Modeling stock returns where extreme values (crashes or booms) occur.
+Insurance: Assessing risks and claims, as rare, high-cost events need to be accounted for.
+Internet Traffic: Analyzing website traffic, where most pages have few hits, but some have very high traffic.
+Natural Phenomena: Earthquake magnitudes, where small quakes are common but large ones are rare.
+3. Central Limit Theorem
+The Central Limit Theorem (CLT) states that the sampling distribution of the sample mean approaches a normal distribution as the sample size becomes large, regardless of the population's distribution, provided the samples are independent and identically distributed.
+
+4. Example of the Central Limit Theorem
+Suppose you are measuring the heights of adult men in a city. The distribution of heights may not be normal; it could be skewed. However, if you take multiple random samples of 50 men each and calculate their average heights, the distribution of these sample means will approximate a normal distribution, even if the original height distribution is not normal.
+
+5. Common Characteristics Used in Descriptive Statistics
+Measures of Central Tendency: Mean, median, and mode.
+Measures of Dispersion: Range, variance, standard deviation, and interquartile range.
+Shape of the Distribution: Skewness and kurtosis.
+Visualizations: Histograms, box plots, and scatter plots.
+6. Calculating Range and Interquartile Range
+Range:
+
+The range is the difference between the maximum and minimum values in a dataset.
+Range
+=
+Max value
+−
+Min value
+Range=Max value−Min value
+Interquartile Range (IQR):
+
+The IQR measures the spread of the middle 50% of the data.
+To calculate the IQR:
+Order the data from smallest to largest.
+Find the first quartile (Q1): This is the median of the lower half of the data (25th percentile).
+Find the third quartile (Q3): This is the median of the upper half of the data (75th percentile).
+Subtract Q1 from Q3:
+IQR
+=
+�
+3
+−
+�
+1
+IQR=Q3−Q1
+For example, if your dataset is [2, 4, 5, 7, 8, 10, 12], Q1 is 4, Q3 is 10, so the IQR is 
+10
+−
+4
+=
+6
+10−4=6.
+
+
+
+
+
+
+
+Message ChatGPT
+
+ChatGPT can make mistakes. Check important info.
+ChatGPT
