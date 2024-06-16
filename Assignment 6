@@ -1,0 +1,83 @@
+
+
+What is Normalization?2. What do you mean by feature scaling or data normalization?Explain some techniques for feature scaling?3. How significant is Normalization?4. What are the Popular Normalization Techniques.5. When to use Normalization or Standardization?What are the missing values? and How do you handle
+
+missing values?
+
+Why Is Data Missing From The Dataset
+
+What are the types Of Missing Value
+
+Why Do We Need To Care About Handling Missing Valuea
+Normalization and Feature Scaling
+1. What is Normalization?
+Normalization is the process of adjusting values measured on different scales to a common scale, often prior to averaging. In data processing, it refers to transforming data into a range, typically [0, 1], or to have a specific property, like a mean of 0 and a standard deviation of 1.
+
+2. What do you mean by feature scaling or data normalization? Explain some techniques for feature scaling.
+Feature scaling or data normalization involves adjusting the range of independent variables or features of data. Techniques include:
+
+Min-Max Scaling: Transforms features to fall within a specific range, usually [0, 1].
+ 
+​
+ 
+Z-score Standardization (Standard Scaling): Centers the data by subtracting the mean and then scales it by the standard deviation.
+
+
+​
+ 
+MaxAbs Scaling: Scales each feature by its maximum absolute value, ensuring the range is [-1, 1].
+
+ 
+Robust Scaling: Uses the median and interquartile range (IQR) for scaling, making it robust to outliers
+​
+ 
+3. How significant is Normalization?
+Normalization is crucial for many machine learning algorithms that calculate distances between data points, like k-nearest neighbors (KNN) or algorithms that rely on gradient descent optimization, like neural networks. It ensures that no feature dominates due to its scale, leading to improved convergence rates and model performance.
+
+4. What are the Popular Normalization Techniques?
+Popular normalization techniques include:
+
+Min-Max Scaling
+Z-score Standardization
+MaxAbs Scaling
+Robust Scaling
+5. When to use Normalization or Standardization?
+
+Normalization: Use when you know the distribution of the data does not follow a Gaussian distribution and the algorithms do not assume any distribution (e.g., KNN, neural networks).
+Standardization: Use when the data follows a Gaussian distribution or the algorithm expects standardized data (e.g., linear regression, logistic regression).
+Handling Missing Values
+1. What are the missing values and how do you handle them?
+Missing values are instances where no data value is stored for a variable in an observation. Handling them involves:
+
+Imputation: Filling in missing values with estimated ones.
+Mean/Median/Mode Imputation: Replace missing values with the mean, median, or mode of the column.
+K-Nearest Neighbors (KNN) Imputation: Uses the KNN algorithm to impute missing values.
+Multivariate Imputation: Uses models like MICE (Multiple Imputation by Chained Equations) to predict missing values.
+Deletion: Removing observations or features with missing values.
+Listwise Deletion: Removes all data for an observation with any missing values.
+Pairwise Deletion: Removes only the missing value entries for analysis, preserving as much data as possible.
+2. Why Is Data Missing From The Dataset?
+Data can be missing due to various reasons:
+
+Human Error: Mistakes in data entry.
+Technical Issues: Failures in data collection systems.
+Non-response: Participants opting out of answering certain questions.
+Data Corruption: Loss or corruption of data files.
+3. What are the types of missing values?
+
+Missing Completely at Random (MCAR): The missingness has no relationship with any data values, observed or missing.
+Missing at Random (MAR): The missingness is related to observed data but not the missing data itself.
+Missing Not at Random (MNAR): The missingness is related to the missing data itself.
+4. Why Do We Need to Care About Handling Missing Values?
+Proper handling of missing values is crucial because:
+
+Bias Reduction: Improper handling can lead to biased statistical estimates.
+Model Performance: Models trained on incomplete data can perform poorly or yield inaccurate predictions.
+Data Integrity: Ensures that the data used for analysis and modeling is as complete and representative as possible, maintaining the integrity of the conclusions drawn.
+
+
+
+
+
+
+
