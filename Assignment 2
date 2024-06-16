@@ -1,0 +1,102 @@
+
+
+1.Define the Pandas/Python pandas?
+2. Mention the different types of Data Structures in Pandas?
+3. Define DataFrame in Pandas?
+4. Define the different ways a DataFrame can be created in
+pandas?
+5. How will you create a series from dict in Pandas?
+6. How will you create an empty DataFrame in Pandas?
+7. How will you add a column to a pandas DataFrame?
+8. How to get the items of series A not present in series B?
+9. How to get the items not common to both series A and series
+B?
+10. How to get the minimum, 25th percentile, median, 75th,
+and max of a numeric series?
+11.How to get frequency counts of unique items of a series?
+12. How to convert a numpy array to a dataframe of given shape?
+13. How can we convert a Series to DataFrame?
+
+
+
+Pandas/Python pandas:
+Pandas is a powerful, open-source data manipulation and analysis library for the Python programming language. It provides data structures and functions needed to manipulate structured data seamlessly, particularly tabular data with labeled axes (rows and columns).
+
+Different types of Data Structures in Pandas:
+
+Series: A one-dimensional labeled array capable of holding any data type (integers, strings, floating point numbers, Python objects, etc.).
+DataFrame: A two-dimensional labeled data structure with columns of potentially different types, similar to a spreadsheet or SQL table.
+Define DataFrame in Pandas:
+A DataFrame is a two-dimensional, size-mutable, and potentially heterogeneous tabular data structure with labeled axes (rows and columns). It is analogous to a table in a database or an Excel spreadsheet.
+
+Different ways a DataFrame can be created in Pandas:
+
+From a dictionary of lists or arrays:
+
+data = {'column1': [1, 2], 'column2': [3, 4]}
+df = pd.DataFrame(data)
+From a list of dictionaries:
+
+data = [{'a': 1, 'b': 2}, {'a': 3, 'b': 4}]
+df = pd.DataFrame(data)
+From a NumPy array:
+
+import numpy as np
+data = np.array([[1, 2], [3, 4]])
+df = pd.DataFrame(data, columns=['column1', 'column2'])
+From another DataFrame:
+
+df1 = pd.DataFrame({'a': [1, 2], 'b': [3, 4]})
+df2 = pd.DataFrame(df1)
+From a CSV file:
+
+df = pd.read_csv('file.csv')
+Create a series from dict in Pandas:
+
+
+data = {'a': 1, 'b': 2, 'c': 3}
+series = pd.Series(data)
+Create an empty DataFrame in Pandas:
+
+
+empty_df = pd.DataFrame()
+Add a column to a pandas DataFrame:
+
+
+df['new_column'] = [value1, value2, value3]
+Get the items of series A not present in series B:
+
+
+A = pd.Series([1, 2, 3, 4])
+B = pd.Series([2, 4, 6])
+result = A[~A.isin(B)]
+Get the items not common to both series A and series B:
+
+
+A = pd.Series([1, 2, 3, 4])
+B = pd.Series([2, 4, 6])
+result = pd.concat([A[~A.isin(B)], B[~B.isin(A)]])
+Get the minimum, 25th percentile, median, 75th percentile, and max of a numeric series:
+series = pd.Series([1, 2, 3, 4, 5])
+stats = series.describe(percentiles=[.25, .5, .75])
+result = stats[['min', '25%', '50%', '75%', 'max']]
+Get frequency counts of unique items of a series:
+
+
+series = pd.Series([1, 2, 2, 3, 3, 3])
+frequency_counts = series.value_counts()
+Convert a numpy array to a DataFrame of given shape:
+
+
+import numpy as np
+data = np.array([[1, 2, 3], [4, 5, 6]])
+df = pd.DataFrame(data, columns=['column1', 'column2', 'column3'])
+Convert a Series to DataFrame:
+
+
+series = pd.Series([1, 2, 3], name='values')
+df = series.to_frame()
+
+
+
+
