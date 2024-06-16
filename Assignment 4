@@ -1,0 +1,108 @@
+
+What is the difference between Data Wrangling and ETL?
+Can you explain what a dirty data record is in context of data
+wrangling?
+Can you explain what an outlier is? How do you deal with
+them?
+How would you go about identifying duplicate records in a
+database?
+What are some common problems that can occur when dealing
+with messy or unclean data?
+Can you give me some examples of real-world uses cases where
+data wrangling has played an important role?
+What are some best practices for cleaning up messy data?
+What’s your understanding of missing values? What are some
+ways to handle them?
+Are there any situations where it makes sense to delete data
+instead of replacing it or trying to fix it?
+What are some common mistakes that people make while
+performing data wrangling?
+What are the different types of data quality issues you’ve
+had to deal with in previous roles?
+What are the pros and cons of using Python vs R for data
+wrangling?
+Have you ever used regular expressions to perform data
+cleansing? If yes, then please describe.
+What are some specific techniques you have used to
+locate outliers in datasets?
+What are some of the most common challenges you face
+during data wrangling projects?
+Can you tell me how you would go about removing
+duplicates from a dataset?
+
+What is the difference between Data Wrangling and ETL?
+
+Data Wrangling: This involves cleaning and transforming raw data into a more usable format. It typically deals with messy data, correcting inconsistencies, handling missing values, and reformatting data.
+ETL (Extract, Transform, Load): This is a process in data warehousing that involves extracting data from various sources, transforming it into a suitable format, and then loading it into a target database or data warehouse. ETL is more about moving data between systems and preparing it for analysis.
+Can you explain what a dirty data record is in the context of data wrangling?
+
+A dirty data record is a data entry that contains errors, inconsistencies, or inaccuracies. This can include missing values, duplicates, incorrect formats, and outliers that do not conform to expected patterns.
+
+Can you explain what an outlier is? How do you deal with them?
+
+An outlier is a data point that significantly differs from other observations. To deal with outliers, you can:
+
+Remove them if they are errors.
+Transform the data using techniques like log transformation.
+Use robust statistical methods that are less affected by outliers.
+Analyze them separately if they represent significant but rare events.
+How would you go about identifying duplicate records in a database?
+
+To identify duplicates, you can:
+
+Use SQL queries with the GROUP BY clause to find records with identical values in key fields.
+Employ data profiling tools to find records with similar or identical attributes.
+Use Python libraries like pandas to find duplicates using the duplicated() method.
+What are some common problems that can occur when dealing with messy or unclean data?
+
+Missing values
+Inconsistent data formats
+Duplicates
+Outliers
+Incorrect data types
+Inconsistent categorical values
+Mixed data types in a single column
+Can you give me some examples of real-world use cases where data wrangling has played an important role?
+
+Preparing customer data for personalized marketing campaigns.
+Cleaning clinical trial data for medical research.
+Standardizing financial transaction records for fraud detection.
+Aggregating sensor data from IoT devices for predictive maintenance.
+What are some best practices for cleaning up messy data?
+
+Validate and standardize data formats.
+Handle missing values appropriately.
+Remove or correct outliers.
+De-duplicate records.
+Ensure consistent naming conventions and data types.
+Document the cleaning process for reproducibility.
+What’s your understanding of missing values? What are some ways to handle them?
+
+Missing values are gaps in data where no value is recorded. They can be handled by:
+
+Imputing with mean, median, or mode.
+Using advanced imputation techniques like k-nearest neighbors.
+Removing rows or columns with excessive missing values.
+Using algorithms that can handle missing values inherently.
+Are there any situations where it makes sense to delete data instead of replacing it or trying to fix it?
+
+Yes, it makes sense to delete data when:
+
+The proportion of missing data is too high, making imputation unreliable.
+The data is not relevant to the analysis or task at hand.
+The data is erroneous and cannot be corrected or validated.
+What are some common mistakes that people make while performing data wrangling?
+
+Overlooking data quality issues.
+Imputing missing values without considering the context.
+Failing to remove duplicate records.
+Not validating data transformations.
+Ignoring the importance of data documentation.
+What are the different types of data quality issues you’ve had to deal with in previous roles?
+
+Inconsistent data formats.
+Missing values.
+Duplicates.
+Outliers.
+Incorrect data types.
+Inconsistent naming conventio
